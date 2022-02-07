@@ -1,0 +1,1 @@
+https://colab.research.google.com/github/deepmind/alphafold/blob/main/notebooks/AlphaFold.ipynb#scrollTo=lUQAn5LYC5n4
