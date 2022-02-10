@@ -1,3 +1,7 @@
+Utilisation d'ALphafold pour reconstruire les C ter de tubuline:
+Alphafold a tendance à replier les queues Cter en hélice alpha, de manière analogue aux premiers champs de forces utilisés en MD. 
+Intéressant car cela montre qu'ALphafold a encore des progrès à faire.
+
 Reconstruction des dimères de tubuline :
 Les tubulines beta présentent une hélice alpha mobile aux résidus 278 à 285, qui n'est pas résolue dans la structure 1SA0.
 Il existe une structure dimérique 5ij0 contenant une tubuline beta3, mais celle-ci est très dans la région structurée (1-427) de la beta1 du fichier 6CVN.
