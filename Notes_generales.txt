@@ -9,5 +9,8 @@ Le fichier 6CVN étant le fichier contenant la protéine tau, je n'utilserai don
 des tubulines alpha1, beta1 et beta3 dans un soucis de cohérence. 
 De plus, en ce qui concerne la boucle flexible d'alpha1 (résidus 37 à 45), 5ij0 ne la résolue pas alors qu'elle est disponible sur 6CVN.
 Idem pour 1SA0 qui ne résolue pas de 37 à 47.
+Publication 1SA0 : 06/02/2004   Résolution : 3.58 A
+Publication 5IJ0 : 01/03/2016   Résolution : 3.80 A
+Publication 6CVN : 28/03/2018   Résolution : 3.90 A
 Enfin 6CVN a une résolution comparable aux deux autres fichiers.
 6CVN est donc le meilleur modèle à tout point de vue. 
