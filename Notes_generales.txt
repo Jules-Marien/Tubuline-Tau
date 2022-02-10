@@ -1,0 +1,5 @@
+Reconstruction des dimères de tubuline :
+Les tubulines beta présentent une hélice alpha mobile aux résidus 278 à 285, qui n'est pas résolue dans la structure 1SA0.
+Il existe une structure dimérique 5ij0 contenant une tubuline beta3, mais celle-ci est très dans la région structurée (1-427) de la beta1 du fichier 6CVN.
+Le fichier 6CVN étant le fichier contenant la protéine tau, je n'utilserai donc que celui-ci pour produire les modèles finaux 
+des tubulines alpha1, beta1 et beta3 dans un soucis de cohérence. 
