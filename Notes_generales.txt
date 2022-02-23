@@ -51,3 +51,5 @@ Solution : Création d'un fichier PDB "aligné" pour les structures à comparer,
 Nom du script : Analyse_Energy_RMSD_complet_alpha1_beta1_avec_tau_chainA.py
 
 Script rendu le plus modulable possible afin de pouvoir s'adapter en cas de besoin.
+
+Piste pour une prochaine fois : MDanalysis. Mais pas sûr que le problème de calcul RMSD des parties désordonnées ne se pose pas à nouveau.
