@@ -16,7 +16,7 @@ Enfin 6CVN a une résolution comparable aux deux autres fichiers.
 6CVN est donc le meilleur modèle à tout point de vue. 
 
 
-
+15/02/2022:
 Sélection des tubulines générées sur Modeller :
 Visualisation des tubulines sur VMD en superposition avec 6cvn, afin de vérifier que la queue Cter n'est pas en 
 clash stérique avec une autre tubuline ou avec Tau.
@@ -32,3 +32,22 @@ Etapes de la reconstruction :
 -Extraction des fichiers PDB via "Save Coordinates"
 -Traitement des fichiers obtenus afin de remplacer le nom de chain
 -Concatenation des fichiers en un PDB unique
+
+
+
+23/02/2022:
+Generation Modeller de 100 modèles de 6CVN avec queues Cter rajoutées, avec les combinaisons beta1/beta3 avec/sans Tau.
+(Donc en tout, 400 modèles répartis en 4 groupes)
+
+Développement d'un programme d'analyse des structures afin de pouvoir réaliser un plot Energie(RMSD) et déterminer s'il existe 
+des groupes conformationnels au niveau des Cter.
+Pour cela, nécessité d'aligner les structures sur une structure de réference (désignée comme celle présentant la plus basse énergie molpdf sur Modeller).
+Seuls les coeurs structurés des tubulines sont utilisés pour l'alignement. 
+On calcule ensuite le RMSD sur les queues Cter uniquement
+
+Difficulté : Décomposer l'alignement des coeurs et la RMSD sur les Cter, la plupart des modules d'analyses alignent automatiquement la structure 
+si calcul de RMSD. 
+Solution : Création d'un fichier PDB "aligné" pour les structures à comparer, puis calcul "à la main" (= sans module) de la RMSD sur les Cter. 
+Nom du script : Analyse_Energy_RMSD_complet_alpha1_beta1_avec_tau_chainA.py
+
+Script rendu le plus modulable possible afin de pouvoir s'adapter en cas de besoin.
