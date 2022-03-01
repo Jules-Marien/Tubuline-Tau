@@ -53,3 +53,15 @@ Nom du script : Analyse_Energy_RMSD_complet_alpha1_beta1_avec_tau_chainA.py
 Script rendu le plus modulable possible afin de pouvoir s'adapter en cas de besoin.
 
 Piste pour une prochaine fois : MDanalysis. Mais pas sûr que le problème de calcul RMSD des parties désordonnées ne se pose pas à nouveau.
+
+
+01/03/2022:
+La décomposition pour le calcul du RMSD fonctionne. Obligé de calculer le RMSD des queues Cter sans module, mais résultats cohérents avec ceux 
+obetnus en utilisant VMD. 
+Les plots permettent de sélectionner 5 structures de chaque tubuline, qu'on utilisera pour créer des modèles différents pour les dynamiques. 
+Ajout de ces plots dans le dossier Plots_cluster_tubulines
+
+Création d'un plot DSSP pour la trajectoire du fragment de Tau. Pour cela, utilisation du module mdtraj pour faire le calcul de la DSSP, puis 
+création d'un plot avec un programme perso Analyse_et_Plot_DSSP_V2.py
+On observe une petite hélice alpha transitoire en début de dynamique, qui disparait au bout de 25ns et ne se reforme pas. 
+Le fragment est en majorité de coil et de turn, et est donc bien destructuré. 
