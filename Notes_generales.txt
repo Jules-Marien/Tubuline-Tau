@@ -65,3 +65,18 @@ Création d'un plot DSSP pour la trajectoire du fragment de Tau. Pour cela, util
 création d'un plot avec un programme perso Analyse_et_Plot_DSSP_V2.py
 On observe une petite hélice alpha transitoire en début de dynamique, qui disparait au bout de 25ns et ne se reforme pas. 
 Le fragment est en majorité de coil et de turn, et est donc bien destructuré. 
+
+
+09/03/2022:
+Density plot du rayon de gyration du fragment de Tau dans l'eau : gaussienne centrée sur la moyenne
+
+Clusterisation des structures par leurs coordonnées DOPE/RMSD de la Cter en utilisant le module sklearn_extra.cluster.KMedoids 
+Se repose sur la MachineLearning, et retourne le medoid = structure représentative de chaque cluster. 
+J'ai mis l'accent sur la RMSD en imposant un coeff multiplicateur que je retire ensuite.
+--> Obtention d'une structure de reference (=de plus basse energie) et de 4 structures de RMSD différentes représentatives
+de la diversité conformationnelle de la Cter.
+
+Création de structures contenant le potentiel électrostatique grầce au serveur www.server.poissonboltzmann.org
+Objectif : comparer l'impact de la présence de Tau et/ou des queues Cter sur les équipotentielles du complexe.
+
+
