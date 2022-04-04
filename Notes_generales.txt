@@ -80,3 +80,28 @@ Création de structures contenant le potentiel électrostatique grầce au serve
 Objectif : comparer l'impact de la présence de Tau et/ou des queues Cter sur les équipotentielles du complexe.
 
 
+
+
+04/04/2022:
+Clusterisation au final accompli grace à gmx_clustering. 
+Mise en place d'une "pipeline" (suite de programmes) afin de pouvoir rapidement clusteriser les Cter à partir d'un ensmeble de structures Modeller.
+
+Selection de 3 structures, 2 étant les structures représentatives des clusters 1 et 13 à cutoff 0.85A, la dernière étant la structure "oustider" 
+à cutoff 1.1A. 
+Calcul des RMSD intra et interclusters révèlent bien une plus haute RMSD intracluster que intercluster. Mise en évidence par le biais de heatmaps.
+La structure 17 (outsider) est reperable sur la carte des RMSD structure à structure car elle est différente (Cter bien plus allongées).
+
+
+Utilisation de cette structure allongée pour tester la boite d'eau. 
+Test 1 : boite de 175x175x175. 500000 atomes, prendrait plus de 33 jours de calculs par trajectoire, et un peu courte selon la longueur du complexe. 
+Nous a parmis de voir que le complexe reste relativement statique, peu de gyration/translation -> possibilité de réduire la boite ?
+
+Test 2 : boite de 175x110x110. Bien plus petite et performante. Seulement 10 jours. Mais très courte, les queues Cter dépassent de la boite.
+
+Test 3 : boite de 190x130x130. a suivre
+
+
+
+
+En parallèle, développement de programmes d'analyse pour les contacts entre résidus et l'etude des centres de masse des Cter.
+Utilisation de MDAnalysis prometteuse. a suivre
