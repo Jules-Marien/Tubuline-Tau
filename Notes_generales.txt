@@ -105,3 +105,36 @@ Test 3 : boite de 190x130x130. a suivre
 
 En parallèle, développement de programmes d'analyse pour les contacts entre résidus et l'etude des centres de masse des Cter.
 Utilisation de MDAnalysis prometteuse. a suivre
+
+
+
+
+
+
+11/04/22:
+Les contacts entre les résidus sont bien déterminés par le programme. Utilisation de MDAnalysis et du module "contacts".
+Fonctions : contacts.distance_array pour obtenir les distances, puis contacts.contact_matrix pour en déduire les contacts. 
+Vérification concluante en observant les distances entre atomes sur VMD.
+
+Les centres de masse sont également déduits grâce à MDAnalysis au moyen de u.select_atoms(selection_chain).center_of_mass()
+Représentation intéressante en 3D grâce à ax.scatter3D.
+Oubli : on a besoin d'aligner les structures pour que les positions des centres de masse soient comparables ! A corriger. 
+
+Lancement de dynamique des modèles 17, 22 et 84 dans une boîte d'eau de 190x130x130. Temps de calcul : 14 jours. 
+Problème des conditions périodiques : Si la structure se place dans les petites direcitions, elle interragira avec elle même. 
+Observation à ~50ns : légère rotation pour tous les modèles, mais rien d'excessif pour l'instant. Espoir que la dynamique se déroule jusqu'au bout sans 
+problème. A suivre
+
+Solutions potentielles pour empêcher la rotation du complexe :
+- Fixer des atomes dans l'espace. Avantage : efficace. Désavantage : Fixer des C-alpha au coeur de la structure doit imposer des torsions peu naturelles.
+Risque de déstabiliser le système sur le long terme ?
+
+- Utiliser les colvars pour imposer une contrainte sur la rotation. L'idée est que toute la structure se voit appliquer des forces pour la 
+maintenir à moins de 5 degrés de rotation. Avantage : Plus souple et plus "naturelle" que de fixer des atomes. 
+Désavantage : Appliquer ces rotations ne risque-t-il pas de déranger le libre mouvement des queues Cter ? 
+2 options :
+*Appliquer la rotation à toute la structure. Problème de l'impact sur les parties flexibles. 
+*Appliquer la rotation seulement au coeur des tubulines. Problème d'un possible effet de "drag" sur les queues Cter. On peut s'imaginer 
+que cela se traduira par une force vers le bas qui tendra à allonger les Cter ou à déformer le base. 
+
+A suivre pour la vérification de ces méthodes. 
