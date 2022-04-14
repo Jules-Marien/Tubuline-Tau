@@ -138,3 +138,21 @@ Désavantage : Appliquer ces rotations ne risque-t-il pas de déranger le libre 
 que cela se traduira par une force vers le bas qui tendra à allonger les Cter ou à déformer le base. 
 
 A suivre pour trancher entre ces méthodes. 
+
+
+
+14/04/22 : 
+
+Alignement des structures pour les centres de masse effectué. 
+Question de la représentation : Piste : Créer un fichier PDB "fictif" contenant seulement les centres de masse et les superposer à la première structure.
+
+
+Simulation : Observation à ~100ns : les queues Cter commencent à montrer des comportements interessants, notamment à explorer certaines
+régions des coeurs de tubuline. 
+En terme de dérives, celles-ci s'accentuent, mais ne dépassent pas encore les 45°. A garder à l'oeil.
+
+
+Bloquer la rotation : Discussion avec Jérôme au sujet de la colvar. D'après lui, appliquer la rotation seulement aux coeurs de tubuline est la meilleure option. 
+L'idée est que la colvar agit un peu comme un terme additionnel de champ de force. Si on applique la correction "à l'équilibre" (ce qui serait le cas de notre système), on aurait pas de problème de "tractions" des queues Cter par les coeurs. 
+Lancement d'une première dynamique de 1ns pour vérifier que ça marche, puis je pense en lancer une de 20ns pour vérifier que les Cter 
+ne se comportent pas différemment. 
