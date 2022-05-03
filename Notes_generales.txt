@@ -156,3 +156,28 @@ Bloquer la rotation : Discussion avec Jérôme au sujet de la colvar. D'après l
 L'idée est que la colvar agit un peu comme un terme additionnel de champ de force. Si on applique la correction "à l'équilibre" (ce qui serait le cas de notre système), on aurait pas de problème de "tractions" des queues Cter par les coeurs. 
 Lancement d'une première dynamique de 1ns pour vérifier que ça marche, puis je pense en lancer une de 20ns pour vérifier que les Cter 
 ne se comportent pas différemment. 
+
+
+
+03/05/22:
+
+Simulations avec Tau terminées, au final pas de problème lié à la rotation.
+Implémentation de la solution par colvars pour éviter la rotation à l'avenir. 
+
+
+Analyses des centres de masse (COM) et des contacts bien avancés. 
+Identification de résidus critiques à la stabilité du complexe Tau-tubuline. 
+Parmi eux, la Ser1355 et la Ser1359.
+Ser1355 correspond à la Ser289 dans R2 de Tau, identifiée comme phosphorylée dans le cas de la maladie d'Alzheimer.
+Ser1359 correspond à la Ser293 dans R2 de Tau, elle-même équivalente à Ser262 (R1), Ser324 (R3) et Ser356 (R4) et toutes trois phosphorylées si AZ.
+
+Ser1355 est critique car elle conserve à 100% ses contacts natifs avec ses voisins situés sur les coeurs de tubuline, probablement par liaison H.
+Ser1359 les conserve moins mais contribue néanmoins à la stabilité de Tau sur les tubulines. 
+
+L'autre extrémité de Tau semble maintenue par les ILE1343 et ILE1344, mais de manière moins solide.
+Il s'agit également d'une extrémité chargée positivement, il est donc possible que l'interaction soit de nature électrostatique ici. 
+
+L'étude des COM montre que les Cter ne franchissent jamais Tau. 
+Double raisons possibles : contraintes au niveau de la base des Cter qui se interragissent avec Tau, et barrière électrostatique négative. 
+
+Pour trancher, nécessité d'avoir les résultats sans Tau qui arriveront en fin de semaine.
